@@ -62,7 +62,7 @@ jobs:
             base_image=$(echo ${{ github.event.pull_request.base.repo.full_name }} | awk '{print tolower($0)}')
             head_image=$(echo ${{ github.event.pull_request.head.repo.full_name }} | awk '{print tolower($0)}')
           else
-            base_image=$(echo ${{ github.repository }} | awk '{print tolower($0)}')
+            base_image=nerivec/silabs-firmware-builder
             head_image=$(echo ${{ github.repository }} | awk '{print tolower($0)}')
           fi
 
